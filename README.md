@@ -5,6 +5,6 @@ This repository contains the code and results to the experiments detailed in (LI
 **Abstract:**
 
 # Where to find what
-## Data
-## Data preparation scripts
-## Experimental results
+## data
+## data-preparation
+## experiments
