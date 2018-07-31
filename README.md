@@ -17,6 +17,7 @@ This folder contains the bash script *data.sh* which you can run as `bash data.s
 - stats-and-meta-data/400000/training-stats-all/: contains *maxi.npy* and *mini.npy*, the parameters for the uniform noise as computed on the embedded training data
 - stats-and-meta-data/400000/: contains *embedding_matrix.npy*, the fixed embedding matrix as constructed on the training data, and *tokenizer.pickle*, a tokenizer object that is used to map natural language strings to the embedded representation via the embedding matrix
 
+## data-preparation
 This folder contains the following scripts that were used to create the experimental data:
 - *baseline-output-batcher.ipynb*: uses the CNN/Daily Mail test set outputs of the baseline model provided by See et al. to produce single data points to folder along with a labels and partition dictionary
 - *clean1to1-test-only-batcher.ipynb*: uses the clean data points from the CNN/Daily Mail test set to produce single data points to folder along with a labels and partition dictionary
