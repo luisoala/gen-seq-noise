@@ -26,3 +26,20 @@ This folder contains the scripts and results for the experiments presented in th
   - *eval_template_output-scoring.ipynb*: contains the script and results of the output scoring of different generative models' outputs with the best discriminator
   - *generators.py*: contains the custom batch generator class that creates the batches for evaluation
   - *stats-4.pickle*: a dictionary of the results from *eval_template_allmodels_threshold-tests-4.ipynb*, can be loaded to reproduce the plots or data without the need for recomputation as this takes some time
+- ow-on-generator: Contains the scripts and results of the experiments run with the one-way discriminator architecture trained with generator noise. There are ten folders numbered 1 to 10 that correspond to the different trials of the experiment with different random seeds. Each trial folder contains the following files.
+  - logs: the tensorboard callback folder with the event file, can be accessed by calling `tensorboad --logdir=/logs`
+  - *accs.pickle*: a list of the batch-wise training accuracies of the experiment
+  - *best.h5*: the best model as validated on the validation loss
+  - *generators.py*: contains the custom batch generator class that feeds data points during training
+  - *losses.pickle*: a list of the batch-wise training losses of the experiment
+  - *ow_template.ipynb*: the script and results of the experiment run on the one-way discriminator architecture
+  - *run_.-tag-val_acc.csv*: epoch-level validation accuracies of the experiment
+  - *run_.-tag-val_loss.csv*: epoch-level validation losses of the experiment
+- ow-on-pseudorandom: Contains the scripts and results of the experiments run with the one-way discriminator architecture trained with pseudo-random noise. There are ten folders numbered 1 to 10 that correspond to the different trials of the experiment with different random seeds. Each folder has the same structure as described above in ow-on-generator.
+- ow-on-uniform: Contains the scripts and results of the experiments run with the one-way discriminator architecture trained with uniform noise. There are ten folders numbered 1 to 10 that correspond to the different trials of the experiment with different random seeds. Each folder has the same structure as described above in ow-on-generator.
+- plots: Contains the following folders that were used to produce plots of the paper
+  - plotter-all-10-runs: contains *max-notebook.ipynb* (used to validate best performing model) and *plotter-all-10-runs-ipynb* (used to produce the training results averaged plots)
+  - see-nll: contains *plotting.ipynb* (used to create the NLL plot of See et al.' PGC network) and *run_.-tag-seq2seq_loss_loss.csv* (the NLL loss history of See et al.' PGC network)
+- tw-on-generator: Contains the scripts and results of the experiments run with the two-way discriminator architecture trained with generator noise. There are ten folders numbered 1 to 10 that correspond to the different trials of the experiment with different random seeds. Each folder has the same structure as described above in ow-on-generator.
+- tw-on-pseudorandom: Contains the scripts and results of the experiments run with the two-way discriminator architecture trained with pseudo-random noise. There are ten folders numbered 1 to 10 that correspond to the different trials of the experiment with different random seeds. Each folder has the same structure as described above in ow-on-generator.
+- tw-on-uniform: Contains the scripts and results of the experiments run with the two-way discriminator architecture trained with uniform noise. There are ten folders numbered 1 to 10 that correspond to the different trials of the experiment with different random seeds. Each folder has the same structure as described above in ow-on-generator.
