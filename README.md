@@ -6,6 +6,17 @@ This repository contains the code and results to the experiments detailed in (LI
 
 # Where to find what
 ## data
+This folder contains the bash script *data.sh* which you can run as `bash data.sh` from the terminal to download the data files used in the experiments and unzip the archive. You can also manually download the zip archive from `https://drive.google.com/open?id=1zo4RDJ6boLHKnHajWMgQ3ty7PsZuJz2U`. The archive contains the following files:
+- exp-data/evaluation-data/test-onlyclean/: *only-clean.zip* contains the labels dictionary, partition dictionary and data points of clean text-summary pairs of the CNN/Daily Mail test set
+- exp-data/evaluation-data/test-onlynoise/generator-dist/: *only-noise.zip* contains the labels dictionary, partition dictionary and data points of generator noise text-summary pairs of the CNN/Daily Mail test set
+- exp-data/evaluation-data/test-onlynoise/pseudorandom-dist/: *only-noise.zip* contains the labels dictionary, partition dictionary and data points of pseudo-random noise text-summary pairs of the CNN/Daily Mail test set
+- exp-data/generator-dist-1to1/: *1to1.zip* contains the labels dictionary, partition dictionary and data points of clean and generator noise text-summary pairs of the CNN/Daily Mail train and validation set
+- exp-data/pseudorandom-dist-1to1/: *1to1.zip* contains the labels dictionary, partition dictionary and data points of clean and pseudo-random noise text-summary pairs of the CNN/Daily Mail train and validation set
+- exp-data/output-scoring/: *baseline.zip*, *pg.zip*, *pgc.zip* and *sumgan.zip* each contain the labels dictionary, partition dictionary and data points of output text-summary pairs of the respective genertaive model on the CNN/Daily Mail test set
+- orig-files/: contains the original train (*train.bin*), validation (*val.bin*) and test (*test.bin*) splits of the CNN/Daily Mail dataset, tokenized and lowercased (detailed preprocessing description see paper)
+- stats-and-meta-data/400000/training-stats-all/: contains *maxi.npy* and *mini.npy*, the parameters for the uniform noise as computed on the embedded training data
+- stats-and-meta-data/400000/: contains *embedding_matrix.npy*, the fixed embedding matrix as constructed on the training data, and *tokenizer.pickle*, a tokenizer object that is used to map natural language strings to the embedded representation via the embedding matrix
+
 ## data-preparation
 This folder contains the following scripts that were used to create the experimental data:
 - *baseline-output-batcher.ipynb*: uses the CNN/Daily Mail test set outputs of the baseline model provided by See et al. to produce single data points to folder along with a labels and partition dictionary
