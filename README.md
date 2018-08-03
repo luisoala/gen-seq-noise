@@ -3,6 +3,8 @@
 This repository contains the code and results to the experiments detailed in (LINK HERE)
 
 **Abstract:**
+# Dependencies
+All dependencies are listed in *requirements.txt*. You can conveniently clone the conda virtual environment used in the experiments by doing `conda env create -f conda-env.txt`
 
 # Where to find what
 ## data
